@@ -3,7 +3,7 @@ from tkinter import *
 
 def get_weather():
     city = city_entry.get()
-    api_key = "30d4741c779ba94c470ca1f63045390a"
+    api_key = "Use your own Api"
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
     
     try:
