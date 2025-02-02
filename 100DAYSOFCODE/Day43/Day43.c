@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main() {
-    float marks[4], total = 0, per;
+    float marks[4], sum = 0, per;
     char grade;
     int i;
     printf("Enter marks for 4 subjects :\n");
     for (i = 0; i < 4; i++) {
         printf("Subject %d: ", i + 1);
         scanf("%f", &marks[i]);
-        total += marks[i];
+        sum += marks[i];
     }
-    per = total / 4;
+    per = sum / 4;
     int div = (per >= 90) ? 1 :(per >= 80) ? 2 :
     (per >= 70) ? 3:(per >= 60) ? 4 :(per >= 50) ? 5 : 6;
     switch (div) {
@@ -21,7 +21,7 @@ int main() {
         default: grade = 'F'; 
     }
     printf("----Results:----\n");
-    printf("Total Marks: %.2f/400\n", total);
+    printf("Total Marks: %.2f/400\n", sum);
     printf("Percentage: %.2f%%\n", per);
     printf("Your Grade: %c\n", grade);
     
@@ -32,8 +32,3 @@ int main() {
 
     return 0;
 }
-
-
-
-
-
